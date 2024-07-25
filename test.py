@@ -1,6 +1,6 @@
 import requests
 
-url = "https://taco-taskkatcon.in"
+url = "https://www.google.com"
 
 res = requests.get(url)
 
