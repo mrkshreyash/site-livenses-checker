@@ -7,9 +7,9 @@ import requests
 
 
 def send_mail(subject: str, body: str):
-    sender_mail: str = "shreyash.kamble@puretechnology.in"
-    receiver_mail: str = "shreyash261020@gmail.com"
-    password: str = "nrfl xkso wakn qnzh"
+    sender_mail: str = "sender-email-id"
+    receiver_mail: str = "receiver-email-id"
+    password: str = "sender-mail-security-key"
 
     message = MIMEMultipart()
     message['From'] = sender_mail
@@ -30,7 +30,7 @@ def check_site(url: str):
     response = requests.get(url, timeout=15)
 
     try:
-        if (response.status_code == 200) or "TATA AUTOCOMP KATCON EXHAUST SYSTEMS" in response.text:
+        if (response.status_code == 200) or "your-existing-message (when site is live)" in response.text:
             print("Server is alive")
 
     except requests.Timeout:
@@ -48,7 +48,7 @@ def check_site(url: str):
 
 
 if __name__ == '__main__':
-    website_url = "https://taco-taskkatcon.in"
+    website_url = "website-url-to-check-the-liveness"
 
     while True:
         try:
